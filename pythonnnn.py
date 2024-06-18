@@ -866,5 +866,15 @@ n=int(input())
 arr=list(map(int,input().split()))
 print(slove(n,arr))
 
-
-# 
+# To find smallest without using built-in min
+def min_built_in(arr):
+    smallest=arr[0]
+    for i in range(len(arr)):
+        if (smallest<arr[i]):
+            continue
+        else:
+            smallest=arr[i]
+    return smallest
+arr=list(map(int,input().split()))
+print(min_built_in(arr))
+         
