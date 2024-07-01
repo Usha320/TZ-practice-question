@@ -1,58 +1,14 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# ## ARGUMENTS
-
-# In[13]:
-
-
-def sum(a,b):
-    return a+b
-print(sum(4,5))
-
-#default arg
-def sum(a,b=10):
-    return a+b
-print(sum(2,5))
-
-#keyword arg
-def sum(a,b):
-    return a+b
-print(sum(a=1,b=2))
-
-
-# ## LIST
-
-# In[16]:
-
-
 list=[1,2,3,4]
 print(list)
-
-
-# ### to remove braces
-
-# In[17]:
-
-
+#to remove braces
 list=[1,2,3,4]
 print(*list)
-
-
 # ## How to take input in list
-
-# In[2]:
-
-
 user_input=input("enter the input")
 number=list(map(int,user_input.split(",")))
 print(number)
 
-
 # ## OOPS
-
-# In[5]:
-
 
 class calculator:
     def __init__(self,a,b):
@@ -70,14 +26,7 @@ class calculator:
 obj1=calculator
 print(obj1.add(2,5))
 
-
-# ## inheritance
-
 # ### single inheritance
-
-# In[10]:
-
-
 class parent:
     def parent_meth():
         return "i am parent"
@@ -89,19 +38,7 @@ print(obj1.parent_meth())
 print(obj1.child_meth())
 
 
-# ### multiple inheritance
-
-# In[ ]:
-
-
-
-
-
 # ### multilevel inheritance
-
-# In[13]:
-
-
 class animal():
     def ani_meth():
         return "i am animal"
@@ -118,10 +55,6 @@ print(obj2.pup_meth())
 
 
 # ### hybrid inheritance
-
-# In[12]:
-
-
 class parent:
     def parent_meth():
         return "i am parent"
@@ -146,10 +79,6 @@ print(obj2.pup_meth())
 
 
 # ### method overriding"
-
-# In[2]:
-
-
 class Animal:
     def speak():
         return "animal is apeaking"
@@ -169,9 +98,6 @@ print(cat.speak())
 
 # ## method everloading
 
-# In[3]:
-
-
 class Calculator:
     def add(self,*args):
         total=0
@@ -184,10 +110,7 @@ print(calculator.add(2,3,4))
 print(calculator.add(2,3,4,5))
 print(calculator.add(2,3,4,5,6))
 
-
-# In[4]:
-
-
+# prime number
 num=int(input("Enter a number"))
 if num>1:
     for i in range(2,(num//2)+1):
@@ -199,25 +122,7 @@ if num>1:
 else:
     print("not prime")
 
-
-# # 
-
-# ## ant on railThere is a ant on your balcony.It wants to leave the rail so sometimes it moves right
-# and sometimes it moves left until it gets exhausted.Given an integer array A of size N
-# which consists of integer 1 and -1 only representing ant's moves.
-# Where 1 means ant moved unit distance towards the right side and -1 means it moved
-# unit distance towards the left .Your task is to find and return the integer value
-# representing how many times the ant reaches back to original starting position.
-# Note:
-# * Assume 1-based indexing
-# * Assume that the railing extends infinitely on the either sides
-# Input Format:
-# input1 : An integer value N representing the number of moves made by the ant.
-# input2 : An integer array A consisting of the ant's moves towards either side
-
-# In[4]:
-
-
+# ## ant on rail
 n=int(input())
 arr=list(map(int,input().split(",")))
 count=0
@@ -226,16 +131,7 @@ for i in range (n):
         count+=1
 print(count)
 
-    
-
-
-# ### 
-
 # ## chocolate jar
-
-# In[8]:
-
-
 arr=list(map(int,input().split(",")))
 n=int(input())
 c=0
@@ -250,9 +146,6 @@ for i in arr:
         else:
             c=c+(i//3)+1
 print(c)
-
-
-# In[16]:
 
 
 cho_in_jar=list(map(int,input().split(",")))
@@ -272,30 +165,17 @@ print(student_a)
 
 
 # ## dog age
-
-# In[15]:
-
-
 def dog_age(n):
     return n*7
 n=int(input())
 dog_age(n)
-
-
-# In[20]:
-
 
 n=int(input())
 arr=list(map(int,input().split(",")))
 for i in range (n):
     print(i)
 
-
 # ## diwali contest
-
-# In[29]:
-
-
 def dewali(n,p):
     total_time=240-p
     problems=0
@@ -309,10 +189,7 @@ n=int(input())
 p=int(input())
 print(dewali(n,p))
 
-
-# In[27]:
-
-
+#String spaces
 def string_space(string):
     str_count=0
     for char in string:
@@ -322,12 +199,7 @@ def string_space(string):
 string=input()
 print(count)
 
-
 # ## paul problem
-
-# In[12]:
-
-
 n=int(input())
 arr=list(map(int,input().split(",")))
 arr.sort()
@@ -341,12 +213,7 @@ for i in range(len(arr)):
         arr[i]=0
 print(sum)
 
-
-# ## rats
-
-# In[1]:
-
-
+# ## rats problem
 def rats(r,unit,arr):
     if len(arr)==0:
         return -1
@@ -361,10 +228,7 @@ unit=int(input("Enter the amount of food a rat consumes:"))
 arr=list(map(int,input("list:").split()))
 print(rats(r,unit,arr))
 
-
-# In[14]:
-
-
+#BinaryOperations
 def operationBinary(s):
     if not s:
         return -1
@@ -384,12 +248,7 @@ def operationBinary(s):
 s=input()
 print(operationBinary(s))
 
-
 # ## checkpassword
-
-# In[34]:
-
-
 def checkPass(password):
     if(len(password)<4):
         return 0
@@ -407,15 +266,11 @@ def checkPass(password):
     if has_digit and has_upper:
         return 1
     else:
-        return 0
-        
+        return 0      
 password=input()
 print(checkPass(password))
 
-
-# In[8]:
-
-
+#count difference
 def count(arr,num,diff):
     count=0
     for i in range(len(arr)):
@@ -426,10 +281,6 @@ arr=list(map(int,input().split()))
 num=int(input())
 diff=int(input())
 print(count(arr,num,diff))
-
-
-# In[5]:
-
 
 def findCount(arr, length, num, diff):
     count = 0
@@ -443,19 +294,7 @@ def findCount(arr, length, num, diff):
     else:
         return count
 
-# Example usage:
-arr = [12,3,14,56,77,13]
-length = len(arr)
-num = 13
-diff = 2
-print(findCount(arr, length, num, diff))  # Output: 3
-
-
 # ## vowals count
-
-# In[14]:
-
-
 def vowals_count(string):
     count=0
     vowals='aeiouAEIOU'
@@ -466,29 +305,8 @@ def vowals_count(string):
 string=input()
 print(vowals_count(string))
 
-
 # ## head tail
 # Toss and score
-# You are playing a game of Toss and Score in the Hillwood City Mall with your friends.
-# The game consists of the following rules:
-# Toss an unbiased coin multiple times.
-# For each heads you get 2 points and for each tails you lose 1 point.
-# The game ends as soon as you get 3 heads in a row, or you toss the coin throughout
-# the length of string S.
-# You have been given a string 5 consisting of letters H (for heads) and T (for tails)
-# denoting the sequence results you get on the tass of coin N times. Your task is to find
-# and return an integer value representing the final score you get once the game ends.
-# Note: The final score can be negative too.
-# Input Specification:
-# Input1: A string s. representing the sequence of results you get on the toss of coin N times
-# Sample Input:
-# HHHTT
-# Output:
-# 6
-
-# In[4]:
-
-
 def toss_and_play(string):
     score=0
     count=0
@@ -508,35 +326,9 @@ print(toss_and_play(string))
 
 # ## desk
 # Nearest Corner
-# Bruce is a newly hired employee at a company. The Office Management Department
-# has given him a desk number, which is stored in string S. He has also been handed a
-# string array A. containing all the N office desk numbers.
-# Array A also includes the symbol"-", which stands for the gap in the sitting
-# arrangement. Comer seats are those that are on either side of the gap. Your task is to
-# help Bruce find and retum an integer value. representing how far he is from the
-# nearest corner seat. Return 0, if he is in the corner seat.
-# Note:
-# There will always be at least one gap in the string array A
-# Desk number is always in a format of a number first followed by an English letter in
-# uppercase
-# Assume 0 - based indexing
-# Input Specification:
-# A string S. representing Bruce's newly assigned desk number.
-# Second line containing space seperated strings showing the seat positions and gaps
-# Sample input:
-# 3C
-# 1A 2B - 3C 4D
-# Sample Output:
-# 0
-
-# In[3]:
-
-
 def seat(desk, arr):
     pos = arr.index(desk)  
     min_distance = float('inf') 
-
-
     for i in range(len(arr)):
         if arr[i] == '-':
             corner_left=arr[i-1]
@@ -551,86 +343,12 @@ def seat(desk, arr):
     
     return min_distance
 
-
 desk = input().strip()  
 arr = input().strip().split()  
 print(seat(desk, arr))
 
-
-# In[10]:
-
-
-def distance_to_corner_seat(S, A):
-    pos = A.index(S) 
-    min_distance = float('inf')
-    corner_indices = []
-    for i in range(len(A)):
-        if A[i] == '-':
-            corner_indices.append(i)
-    for corner_index in corner_indices:
-        distance = abs(pos - corner_index)
-        min_distance = min(min_distance, distance)
-    
-    return min_distance
-S = '3C'
-A = ['1A', '2B', '-', '3C', '4D']
-
-print(distance_to_corner_seat(S, A))
-
-
-# In[13]:
-
-
-def distance_to_corner_seat(S, A):
-    pos = A.index(S)  # Find index of Bruce's desk number S in list A
-    
-    # Initialize variables
-    min_distance = float('inf')
-    corner_indices = []
-    
-    # Find indices of corner seats '-'
-    for i in range(len(A)):
-        if A[i] == '-':
-            corner_indices.append(i)
-    
-    # Calculate distances to the nearest left and right corner seats
-    for corner_index in corner_indices:
-        distance = abs(pos - corner_index)
-        if distance == 0:  # If Bruce's desk is at a corner seat
-            return 0
-        min_distance = min(min_distance, distance)
-    
-    return min_distance
-
-# Example usage:
-S = '3C'
-A = ['1A', '2B', '-', '3C', '4D']
-
-print(distance_to_corner_seat(S, A))  # Output: 0
-
-
 # ## pop
 # Boring Arrays
-# You are given an array A of size N. In one operation you can select any two elements
-# from it, add their absolute difference in your score.
-# Your task is to find and return an integer value, representing the maximum score.
-# Note:
-# Assume 1 based indexing
-# The elements on which operation has been performed cannot be selected again.
-# Input Specification:
-# Input1: An integer value N, representing the size of array A
-# input2: An integer array A
-# Output Specification:
-# Return an integer value, representing the maximum score
-# Sample Input:
-# 4
-# 1 2 3 4
-# Sample Output:
-# 4
-
-# In[27]:
-
-
 def arr(a,n):
     score=0
     while len(n)>1:
@@ -647,34 +365,6 @@ print(arr(a,n))
 
 # ## salt peper
 # '''
-# Problem Statement:
-# In a quaint village nestled between rolling hills, there were N different salt containers
-# and N different pepper containers in two separate groups. Each container had a
-# specific level of bitterness, represented by arrays A and B respectively. The task at
-# hand was to form N combinations, each consisting of one salt container and one
-# pepper container
-# However, there was a twist to the challenge. The objective was to arrange the
-# combinations in such a way that the maximum bitterness level, which is the sum of
-# salt and pepper quantities in each combination, was minimized.
-# Print the lowest possible maximum bitterness level.
-# Input Format:
-# The first line contains a single integer N, the number of salt and pepper containers in
-# each group.
-# The second line contains N space-separated integers, denoting the bitterness level of
-# N salt containers.
-# The third line contains N space-separated integers, denoting the bitterness level of N 
-# Sample Innput:
-# 3
-# 1 3 5
-# 2 8 6
-# Sample Output:
-# 11
-# 
-# '''
-
-# In[34]:
-
-
 def salt_pepper(n,s,p):
     add=[]
     for i in range(len(s)):
@@ -687,27 +377,7 @@ p=list(map(int,input().split()))
 print(salt_pepper(n,s,p))
 
 
-# ## Arduino
-# Tom is an Arduino Programmer. He has designed a program to run his robocar on a
-# horizontal number line. Initially, the car is parked at: 0.
-# Given an array A of N integers which can be A. B. C... the robocar runs as follows as
-# per the designed program
-# First the robocar moves A units in specified direction(right in case the integer is
-# positive and left if the integer is negative).
-# Then robocar first moves A units and then B units in a specified direction.
-# In the next step, the robocar moves A units. B units, and then C units in a specified
-# direction.
-# This process keeps on repeating as per the number of integers in the sequence..
-# Your task is to find and retum an integer value, representing the farthest coordinate
-# reached by the robocar from the beginning to the end of the process.
-# Sample Input:
-# 1 -2 3 4
-# Sample Output:
-# 6
-
-# In[37]:
-
-
+# ## Arduino Robocar
 def robocar(n,arr):
     sum=0
     for i in range(len(arr)):
@@ -720,24 +390,7 @@ n=int(input())
 arr=list(map(int,input().split()))
 print(robocar(n,arr))
 
-
 # ## Pizza Party
-# Angela has decided to throw a pizza party. she has ordered N number of pizzas to be
-# served to her N number of friends. In this way, she will be serving only one pizza to
-# each friend.
-# She now wants to invite fewer people to her party in order to provide more pizzas per
-# person. But at the same time, she wants to ensure that there are at least Y friends at
-# her party.
-# Your task is to help Angela find and return an integer value, representing the sum of
-# digits of the minimum number of friends that she can invite to the party, ensuring
-# that each person gets an equal number of pizzas
-# Sample Input:
-# 100 17
-# Sample Output:2
-
-# In[5]:
-
-
 def party(pizza,people):
     for i in range(people,pizza+1):
         if pizza%i==0:
@@ -746,23 +399,7 @@ pizza=int(input())
 people=int(input())
 print(party(pizza,people))                      
 
-
 # ## Signature for LCM
-# Given two numbers a and b. Find the GCD and LCM of and d.
-# Input:
-# * Two positive integers a and b (1 <=a, b <=1000)
-# Output:
-# For GCD function, an integer representing the GCD of a 'and b
-# For LCM function, an integer representing the LCM of a and b
-# Sample Input:
-# 12 18
-# Output:
-# 6
-# 36
-
-# In[14]:
-
-
 def gcd(a,b):
     while(b>0):
         a,b=b,a%b
@@ -781,10 +418,6 @@ print(gcd(a,b))
 # For example,
 # Input: welcome to geeksforgeeks
 # Output: abdhijnpquvxyz
-
-# In[33]:
-
-
 def pangram(string):
     alp='abcdefghijklmnopqrstuvwxyz'
     string=string.lower()
@@ -804,10 +437,6 @@ print(''.join(pangram(string)))
 # Hello World
 # Sample Output:
 # World Hello
-
-# In[40]:
-
-
 def reverse(string):
     words=string.split()
     rev=words[::-1]
@@ -817,10 +446,6 @@ print(*reverse(string))
 
 
 # ## palindrome
-
-# In[53]:
-
-
 input_=input()
 lower_ip=input_.lower()
 s1=lower_ip
@@ -832,27 +457,6 @@ else:
 
 
 # ## FINDING A PEAK ELEMENT
-
-# ## Peak Element Finder
-# Description: You are given an N- dimensional array arr[]. A peak element in the array 
-# is defined as an element whose value is greater than or equal to its neighboring 
-# elements (if they exist). Your task is to find the index of any peak element in the given 
-# array
-# Note: use 0-based indexing
-# Input:
-# An integer representing the number of elements in the array. N space-separated 
-# integers, denoting the elements of the array.
-# N space-separated integers ,denoting the elements of the array arr[]
-# Sample Input:
-# 5  ,
-# 
-# 1 3 20 4 1
-# Sample Output:
-# 2
-
-# In[ ]:
-
-
 def slove(n,arr):
     c=0
     for i in range(1,n+1):
